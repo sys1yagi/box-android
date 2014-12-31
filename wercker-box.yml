@@ -55,7 +55,7 @@ script: |
   echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
   sudo apt-get install oracle-java8-installer -qq
   sudo apt-get install oracle-java8-set-default -y
-  
+
   sdk_version="23"
 
   profile="/etc/environment"
@@ -76,15 +76,15 @@ script: |
   source $WERCKER_SOURCE_DIR/install-sdk.sh
   source $WERCKER_SOURCE_DIR/update-sdk.sh
 
-  export GRADLE_VERSION=1.12
+  #export GRADLE_VERSION=1.12
   # install graddle
-  source $WERCKER_SOURCE_DIR/install-gradle.sh
+  #source $WERCKER_SOURCE_DIR/install-gradle.sh
 
-  export GRADLE_HOME=$HOME/gradle-$GRADLE_VERSION
-  export PATH=$PATH:$GRADLE_HOME/bin
+  #export GRADLE_HOME=$HOME/gradle-$GRADLE_VERSION
+  #export PATH=$PATH:$GRADLE_HOME/bin
 
-  echo "export GRADLE_HOME=\"${GRADLE_HOME}\"" | sudo tee -a $profile
-  echo "export PATH=\"${PATH}:${GRADLE_HOME}/bin\"" | sudo tee -a $profile
+  #echo "export GRADLE_HOME=\"${GRADLE_HOME}\"" | sudo tee -a $profile
+  #echo "export PATH=\"${PATH}:${GRADLE_HOME}/bin\"" | sudo tee -a $profile
   cat $profile
   cd $HOME
   du -h
