@@ -11,7 +11,6 @@ keywords:
   - ant
   - oracle java 8
   - ivy
-  - ndk
 box-detect:
   priority : 200
   version:
@@ -37,7 +36,6 @@ default-build:
                 echo $ANDROID_SDK_VERSION
                 echo $ANDROID_BUILD_TOOLS
                 echo $ANDROID_UPDATE_FILTER
-                echo $ANDROID_NDK_HOME
           # A step that executes `gradle build` command
           - script:
               name: run gradle
@@ -76,15 +74,6 @@ script: |
   source $WERCKER_SOURCE_DIR/install-sdk.sh
   source $WERCKER_SOURCE_DIR/update-sdk.sh
 
-  #export GRADLE_VERSION=1.12
-  # install graddle
-  #source $WERCKER_SOURCE_DIR/install-gradle.sh
-
-  #export GRADLE_HOME=$HOME/gradle-$GRADLE_VERSION
-  #export PATH=$PATH:$GRADLE_HOME/bin
-
-  #echo "export GRADLE_HOME=\"${GRADLE_HOME}\"" | sudo tee -a $profile
-  #echo "export PATH=\"${PATH}:${GRADLE_HOME}/bin\"" | sudo tee -a $profile
   cat $profile
   cd $HOME
   du -h
