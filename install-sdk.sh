@@ -4,8 +4,8 @@
 wget "http://dl.google.com/android/android-sdk_r${sdk_version}-linux.tgz"
 tar xzf "android-sdk_r${sdk_version}-linux.tgz"
 rm "android-sdk_r${sdk_version}-linux.tgz"
-rm -r "android-sdk-linux/tools/lib/x86"
-rm -r "android-sdk-linux/tools/lib/x86_64"
+rm -r "android-sdk-linux/tools/lib/monitor-x86"
+rm -r "android-sdk-linux/tools/lib/monitor-x86_64"
 
 # Set environment variables
 export ANDROID_HOME=${PWD}/android-sdk-linux
