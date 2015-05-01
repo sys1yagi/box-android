@@ -1,5 +1,5 @@
 name: android
-version: 1.0.8
+version: 1.0.9
 inherits: pjvds/java@0.1.3
 type: main
 platform: ubuntu@12.04
@@ -47,7 +47,7 @@ env:
   ANDROID_SDK_VERSION: "23"
 
 script: |
-  # Install Java 8 
+  # Install Java 8
   sudo apt-get update
   sudo apt-get install python-software-properties curl wget -y
   sudo add-apt-repository ppa:webupd8team/java -y
